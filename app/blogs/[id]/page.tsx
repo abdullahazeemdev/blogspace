@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Heart, Eye, Loader2 } from 'lucide-react';
 
-// 1. Data fetching function
 async function getBlogDetails(id: string) {
   try {
     const res = await fetch(`https://dummyjson.com/posts/${id}`, {
@@ -16,7 +15,7 @@ async function getBlogDetails(id: string) {
   }
 }
 
-// 2. Inner Component jo params ko await karega aur data fetch karega
+
 async function BlogContent({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   const blog = await getBlogDetails(resolvedParams.id);
@@ -75,7 +74,6 @@ async function BlogContent({ params }: { params: Promise<{ id: string }> }) {
   );
 }
 
-// 3. Main Page Component (Ab yeh bilkul clean hai aur Suspense use kar raha hai)
 export default async function BlogDetailPage({ 
   params 
 }: { 

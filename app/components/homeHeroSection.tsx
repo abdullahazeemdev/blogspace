@@ -81,7 +81,7 @@ const HomeHeroSection = () => {
         {/* Right Visual */}
         <div className="relative mx-auto flex w-full max-w-xl items-center justify-center lg:ml-auto">
 
-          {/* Main Illustration Background */}
+         
           <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-[2rem] border border-blue-100/80 bg-gradient-to-br from-blue-50 via-white to-indigo-100/70 p-6 shadow-2xl shadow-blue-900/5 sm:p-10">
 
             {/* Decorative Grid */}
